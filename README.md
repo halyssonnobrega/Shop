@@ -8,7 +8,7 @@
 
     docker build -t shop .
 
-    docker run -it -p 8080:8080 shop
+    docker run --name=shop -it -p 8080:8080 shop
 
 # Authentication
 

@@ -2,5 +2,6 @@ version: '3'
 services:
   docker-app:
     image: halyssonnobrega/shop
+    container_name: 'shop'
     ports:
       - "8080:8080"
