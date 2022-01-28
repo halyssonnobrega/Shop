@@ -71,6 +71,7 @@ public class ShopService {
         }
     }
 
+    @Transactional
     public ItemEO update(Long id, ItemRequest item){
         Optional<ItemEO> itemUpdate = itemRepository.findById(id);
 
@@ -83,10 +84,12 @@ public class ShopService {
         }
     }
 
+    @Transactional
     public List<ItemEO> fetchAll(){
         return itemRepository.findAll();
     }
 
+    @Transactional
     public List<ItemEO> fetchByFilter(Long id, String name, Double price){
         List<ItemEO> itens = new ArrayList<>();
 
